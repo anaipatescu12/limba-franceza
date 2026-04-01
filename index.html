@@ -3,27 +3,29 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Matematică — Liceul Teoretic „Ana Ipătescu"</title>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<title>Limba franceză — Liceul Teoretic „Ana Ipătescu"</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <style>
 :root {
-  --math: #1e3a5f;
-  --math-light: #e8f1fb;
-  --math-mid: #2d5a87;
-  --math-bright: #4a9fd8;
-  --slate: #3d4558;
-  --slate-light: #eef0f6;
-  --amber: #c9a227;
-  --amber-light: #fdf8e8;
-  --dark: #0c1520;
-  --text: #1a2230;
-  --muted: #5c6578;
-  --border: #d4e3f0;
-  --bg: #f5f8fc;
+  --fr: #1e3d59;
+  --fr-light: #e8eef5;
+  --fr-mid: #2c5282;
+  --fr-bright: #4a7eb5;
+  --accent: #a63d40;
+  --accent-light: #f8ecec;
+  --slate: #4a4f5c;
+  --slate-light: #f0f1f5;
+  --gold: #9a7b4f;
+  --gold-light: #faf6ef;
+  --dark: #121820;
+  --text: #1c222c;
+  --muted: #5a6270;
+  --border: #d5dde8;
+  --bg: #f6f8fb;
   --white: #ffffff;
-  --serif: 'Fraunces', Georgia, serif;
-  --sans: 'Plus Jakarta Sans', system-ui, sans-serif;
+  --serif: 'Cormorant Garamond', Georgia, serif;
+  --sans: 'Outfit', system-ui, sans-serif;
   --radius: 16px;
   --radius-sm: 10px;
 }
@@ -43,7 +45,7 @@ nav {
   position: fixed;
   top: 0; left: 0; right: 0;
   z-index: 100;
-  background: rgba(255,255,255,0.92);
+  background: rgba(255,255,255,0.94);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--border);
   padding: 0 40px;
@@ -55,7 +57,8 @@ nav {
 
 .nav-logo {
   font-family: var(--serif);
-  font-size: 1.2rem;
+  font-size: 1.25rem;
+  font-weight: 600;
   color: var(--text);
   text-decoration: none;
   display: flex;
@@ -65,7 +68,7 @@ nav {
 
 .nav-logo .logo-icon {
   width: 32px; height: 32px;
-  background: linear-gradient(135deg, var(--math), var(--math-bright));
+  background: linear-gradient(145deg, var(--fr), var(--fr-mid));
   border-radius: 8px;
   display: flex;
   align-items: center;
@@ -124,7 +127,7 @@ nav {
   display: block;
   width: 24px;
   height: 2px;
-  background: var(--math-bright);
+  background: var(--accent);
 }
 
 .hero h1 {
@@ -137,7 +140,7 @@ nav {
 
 .hero h1 em {
   font-style: italic;
-  color: var(--math);
+  color: var(--fr);
 }
 
 .hero-sub {
@@ -169,9 +172,9 @@ nav {
 }
 
 .btn-primary:hover {
-  background: var(--math);
+  background: var(--fr);
   transform: translateY(-1px);
-  box-shadow: 0 8px 24px rgba(30,58,95,0.25);
+  box-shadow: 0 8px 24px rgba(30,61,89,0.22);
 }
 
 .btn-ghost {
@@ -199,7 +202,7 @@ nav {
 .hero-canvas {
   position: absolute;
   inset: 0;
-  opacity: 0.35;
+  opacity: 0.4;
 }
 
 .hero-visual {
@@ -221,10 +224,10 @@ nav {
   gap: 16px;
 }
 
-.hero-panel.math-a { background: rgba(30,58,95,0.22); }
-.hero-panel.math-b { background: rgba(45,90,135,0.18); }
-.hero-panel.math-c { background: rgba(74,159,216,0.14); }
-.hero-panel.math-d { background: rgba(30,58,95,0.26); }
+.hero-panel.fr-a { background: rgba(30,61,89,0.28); }
+.hero-panel.fr-b { background: rgba(44,82,130,0.22); }
+.hero-panel.fr-c { background: rgba(166,61,64,0.12); }
+.hero-panel.fr-d { background: rgba(30,61,89,0.32); }
 
 .hero-panel-icon {
   width: 80px; height: 80px;
@@ -232,13 +235,14 @@ nav {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 2.2rem;
-  background: rgba(74,159,216,0.2);
+  font-size: 2rem;
+  background: rgba(255,255,255,0.08);
 }
 
 .hero-panel h3 {
   font-family: var(--serif);
-  font-size: 1.4rem;
+  font-size: 1.45rem;
+  font-weight: 600;
   color: white;
   text-align: center;
 }
@@ -265,11 +269,12 @@ section { padding: 96px 0; }
   margin-bottom: 16px;
 }
 
-.section-tag.math { color: var(--math); }
+.section-tag.fr { color: var(--fr); }
 
 .section-title {
   font-family: var(--serif);
   font-size: clamp(2rem, 3.5vw, 3rem);
+  font-weight: 600;
   line-height: 1.15;
   color: var(--dark);
   margin-bottom: 16px;
@@ -309,10 +314,10 @@ section { padding: 96px 0; }
   transition: opacity 0.3s;
 }
 
-.why-card.math-c1::before { background: var(--math-light); }
-.why-card.math-c2::before { background: var(--slate-light); }
-.why-card.math-c3::before { background: var(--amber-light); }
-.why-card.math-c4::before { background: #f0f4fa; }
+.why-card.fr-c1::before { background: var(--fr-light); }
+.why-card.fr-c2::before { background: var(--slate-light); }
+.why-card.fr-c3::before { background: var(--gold-light); }
+.why-card.fr-c4::before { background: var(--accent-light); }
 
 .why-card:hover::before { opacity: 1; }
 .why-card > * { position: relative; z-index: 1; }
@@ -327,14 +332,15 @@ section { padding: 96px 0; }
   margin-bottom: 24px;
 }
 
-.math-c1 .why-icon { background: var(--math-light); color: var(--math); }
-.math-c2 .why-icon { background: var(--slate-light); color: var(--slate); }
-.math-c3 .why-icon { background: var(--amber-light); color: var(--amber); }
-.math-c4 .why-icon { background: #e3ecf8; color: var(--math-mid); }
+.fr-c1 .why-icon { background: var(--fr-light); color: var(--fr); }
+.fr-c2 .why-icon { background: var(--slate-light); color: var(--slate); }
+.fr-c3 .why-icon { background: var(--gold-light); color: var(--gold); }
+.fr-c4 .why-icon { background: var(--accent-light); color: var(--accent); }
 
 .why-card h3 {
   font-family: var(--serif);
-  font-size: 1.4rem;
+  font-size: 1.45rem;
+  font-weight: 600;
   margin-bottom: 14px;
   color: var(--dark);
 }
@@ -359,8 +365,8 @@ section { padding: 96px 0; }
   border-radius: 50px;
   display: inline-block;
   margin-bottom: 32px;
-  background: rgba(74,159,216,0.15);
-  color: #9fd4ff;
+  background: rgba(74,126,181,0.2);
+  color: #a8c8e8;
 }
 
 .teachers-row {
@@ -400,6 +406,7 @@ section { padding: 96px 0; }
 .teacher-info h4 {
   font-family: var(--serif);
   font-size: 1.28rem;
+  font-weight: 600;
   color: white;
   margin-bottom: 6px;
 }
@@ -408,7 +415,7 @@ section { padding: 96px 0; }
   font-size: 0.96rem;
   font-weight: 500;
   letter-spacing: 0.01em;
-  color: #9fd4ff;
+  color: #a8c8e8;
 }
 
 .activities-layout {
@@ -436,8 +443,8 @@ section { padding: 96px 0; }
 }
 
 .activity-item:hover {
-  border-color: var(--math-mid);
-  box-shadow: 0 4px 16px rgba(30,58,95,0.08);
+  border-color: var(--fr-mid);
+  box-shadow: 0 4px 16px rgba(30,61,89,0.08);
   transform: translateX(4px);
 }
 
@@ -493,20 +500,20 @@ section { padding: 96px 0; }
 }
 
 .testimonials-section {
-  background: linear-gradient(to bottom right, var(--math-light), #e3eef9);
+  background: linear-gradient(to bottom right, var(--fr-light), #e5edf5);
   position: relative;
   overflow: hidden;
 }
 
 .testimonials-section::before {
-  content: '∑';
+  content: '«';
   position: absolute;
-  top: -40px;
-  left: 40px;
+  top: -20px;
+  left: 32px;
   font-family: var(--serif);
-  font-size: 280px;
-  color: var(--math);
-  opacity: 0.06;
+  font-size: 220px;
+  color: var(--fr);
+  opacity: 0.07;
   line-height: 1;
   pointer-events: none;
 }
@@ -529,7 +536,7 @@ section { padding: 96px 0; }
   content: '"';
   font-family: var(--serif);
   font-size: 4rem;
-  color: var(--math);
+  color: var(--fr);
   opacity: 0.2;
   position: absolute;
   top: 12px;
@@ -581,6 +588,7 @@ footer {
 footer .footer-logo {
   font-family: var(--serif);
   font-size: 1.4rem;
+  font-weight: 600;
   color: white;
   margin-bottom: 12px;
 }
@@ -606,6 +614,7 @@ footer strong { color: rgba(255,255,255,0.7); }
 .stat-num {
   font-family: var(--serif);
   font-size: 2.8rem;
+  font-weight: 600;
   color: white;
   display: block;
   line-height: 1;
@@ -666,8 +675,8 @@ footer strong { color: rgba(255,255,255,0.7); }
 
 <nav>
   <a href="#" class="nav-logo">
-    <div class="logo-icon"><i class="fas fa-square-root-variable"></i></div>
-    Matematică
+    <div class="logo-icon"><i class="fas fa-language"></i></div>
+    Limba franceză
   </a>
   <ul class="nav-links">
     <li><a href="#about">Despre</a></li>
@@ -681,8 +690,8 @@ footer strong { color: rgba(255,255,255,0.7); }
 <section class="hero" id="about">
   <div class="hero-left">
     <p class="hero-eyebrow animate-in">Liceul Teoretic „Ana Ipătescu" · Gherla</p>
-    <h1 class="animate-in delay-1">Ordine, logică<br>și <em>raționament</em></h1>
-    <p class="hero-sub animate-in delay-2">De la mulțimi și ecuații la geometrie și analiză matematică, disciplina formează gândirea abstractă și precizia argumentării. Construim pași clari, demonstrații riguroase și legături cu fizica, informatica și viața de zi cu zi — de la finanțe la tehnologie.</p>
+    <h1 class="animate-in delay-1">Limba, cultura<br>și <em>lumea francofonă</em></h1>
+    <p class="hero-sub animate-in delay-2">Franceza deschide accesul la literatură, cinema, știință și diplomație în peste 30 de țări. Învețăm comunicarea autentică — de la pronunție și gramatică la expresii idiomatice și sensibilitate interculturală — pentru Bac, studii și călătorii.</p>
     <div class="hero-cta animate-in delay-3">
       <a href="#profesori" class="btn-primary">
         <i class="fas fa-users"></i> Cunoaște-ți profesorii
@@ -695,37 +704,38 @@ footer strong { color: rgba(255,255,255,0.7); }
   <div class="hero-right">
     <svg class="hero-canvas" viewBox="0 0 600 800" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
       <defs>
-        <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
-          <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#4a9fd8" stroke-width="0.5" opacity="0.25"/>
-        </pattern>
+        <linearGradient id="frg" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" style="stop-color:#1e3d59;stop-opacity:0.9"/>
+          <stop offset="100%" style="stop-color:#2c5282;stop-opacity:0.5"/>
+        </linearGradient>
       </defs>
-      <rect width="600" height="800" fill="url(#grid)" opacity="0.6"/>
-      <path d="M 80 520 Q 200 200 320 400 T 520 280" fill="none" stroke="#9fd4ff" stroke-width="2" opacity="0.5"/>
-      <path d="M 100 600 L 180 380 L 260 480 L 340 320 L 420 440 L 500 360" fill="none" stroke="#4a9fd8" stroke-width="1.5" opacity="0.45"/>
-      <polygon points="320,120 380,240 260,240" fill="none" stroke="#c9a227" stroke-width="1.2" opacity="0.4"/>
-      <circle cx="320" cy="400" r="8" fill="#4a9fd8" opacity="0.7"/>
-      <text x="340" y="395" fill="rgba(159,212,255,0.5)" font-size="18" font-family="serif">f(x)</text>
+      <rect width="600" height="800" fill="url(#frg)" opacity="0.5"/>
+      <path d="M 120 200 Q 300 80 480 200 T 480 400" fill="none" stroke="#a63d40" stroke-width="1.2" opacity="0.35"/>
+      <path d="M 80 450 L 520 450" stroke="#4a7eb5" stroke-width="0.8" opacity="0.3"/>
+      <path d="M 80 480 L 520 480" stroke="#4a7eb5" stroke-width="0.8" opacity="0.2"/>
+      <text x="200" y="360" fill="rgba(255,255,255,0.15)" font-size="42" font-family="Georgia,serif" font-style="italic">bonjour</text>
+      <circle cx="300" cy="620" r="60" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
     </svg>
     <div class="hero-visual">
-      <div class="hero-panel math-a">
-        <div class="hero-panel-icon"><i class="fas fa-calculator" style="color:#9fd4ff"></i></div>
-        <h3>Algebră</h3>
-        <p>Structuri, ecuații, inecuații și raționament formal</p>
+      <div class="hero-panel fr-a">
+        <div class="hero-panel-icon"><i class="fas fa-comments" style="color:#c8d9ec"></i></div>
+        <h3>Comunicare orală & scrisă</h3>
+        <p>Exprimare clară în situații reale și redactări structurate</p>
       </div>
-      <div class="hero-panel math-b">
-        <div class="hero-panel-icon"><i class="fas fa-shapes" style="color:#9fd4ff"></i></div>
-        <h3>Geometrie</h3>
-        <p>Spațiu, metrici, demonstrații și vizualizare</p>
+      <div class="hero-panel fr-b">
+        <div class="hero-panel-icon"><i class="fas fa-book-open" style="color:#c8d9ec"></i></div>
+        <h3>Literatură & civilizație</h3>
+        <p>Texte, context cultural și perspective francofone</p>
       </div>
-      <div class="hero-panel math-c">
-        <div class="hero-panel-icon"><i class="fas fa-chart-line" style="color:#9fd4ff"></i></div>
-        <h3>Analiza matematică</h3>
-        <p>Funcții, limite, derivate — baza modelelor moderne</p>
+      <div class="hero-panel fr-c">
+        <div class="hero-panel-icon"><i class="fas fa-globe" style="color:#e8b4b5"></i></div>
+        <h3>Francofonia</h3>
+        <p>Legături cu spațiul european și global</p>
       </div>
-      <div class="hero-panel math-d">
-        <div class="hero-panel-icon"><i class="fas fa-percent" style="color:#9fd4ff"></i></div>
-        <h3>Statistică & probabilități</h3>
-        <p>Date, incertitudine și decizii fundamentate</p>
+      <div class="hero-panel fr-d">
+        <div class="hero-panel-icon"><i class="fas fa-graduation-cap" style="color:#c8d9ec"></i></div>
+        <h3>Examene & certificări</h3>
+        <p>Pregătire pentru probe și competențe lingvistice</p>
       </div>
     </div>
   </div>
@@ -734,20 +744,20 @@ footer strong { color: rgba(255,255,255,0.7); }
 <div class="stats-bar">
   <div class="stats-inner">
     <div class="stat-item reveal">
-      <span class="stat-num">5</span>
+      <span class="stat-num">4</span>
       <span class="stat-label">Profesori</span>
     </div>
     <div class="stat-item reveal">
-      <span class="stat-num">∞</span>
-      <span class="stat-label">Probleme de antrenament</span>
+      <span class="stat-num">A2–C1</span>
+      <span class="stat-label">Niveluri urmărite</span>
     </div>
     <div class="stat-item reveal">
-      <span class="stat-num">π</span>
-      <span class="stat-label">Secții & concursuri</span>
+      <span class="stat-num">🇫🇷</span>
+      <span class="stat-label">Cultură & proiecte</span>
     </div>
     <div class="stat-item reveal">
-      <span class="stat-num">🏆</span>
-      <span class="stat-label">Olimpiade</span>
+      <span class="stat-num">🎭</span>
+      <span class="stat-label">Teatru & lectură</span>
     </div>
   </div>
 </div>
@@ -755,29 +765,29 @@ footer strong { color: rgba(255,255,255,0.7); }
 <section id="activitati">
   <div class="container">
     <p class="section-tag reveal"><i class="fas fa-star"></i> De ce contează</p>
-    <h2 class="section-title reveal">Fiecare demonstrație<br>clarifică gândirea</h2>
-    <p class="section-desc reveal">Matematica nu înseamnă doar memorarea formulelor, ci construirea de argumente coerente, recunoașterea tiparelor și aplicarea lor în contexte noi. Elevii își dezvoltă perseverența, precizia și încrederea în raționament — competențe esențiale în orice domeniu.</p>
+    <h2 class="section-title reveal">O limbă care deschide<br>uși, nu doar manuale</h2>
+    <p class="section-desc reveal">Franceza este limba oficială în organizații internaționale și un reper în educație și cercetare. O stăpânești treptat: prin ascultare activă, conversație ghidată, lectură și scriere — mereu legate de sens și de curiozitate.</p>
 
     <div class="why-grid reveal">
-      <div class="why-card math-c1">
-        <div class="why-icon"><i class="fas fa-infinity"></i></div>
-        <h3>De ce Matematică?</h3>
-        <p>Matematica este limbajul structurilor și al schimbării: de la aritmetică la algebră abstractă și la modele folosite în știință și industrie. Ea susține ingineria, informatica, economia și cercetarea și învață ordinea în gândire.</p>
+      <div class="why-card fr-c1">
+        <div class="why-icon"><i class="fas fa-globe"></i></div>
+        <h3>De ce franceză?</h3>
+        <p>Este a doua limbă cea mai învățată după engleză și oferă acces la o cultură bogată — de la literatura clasică la cinema și benzi desenate. Utilă în UE, în turism, în drept internațional și în multe domenii academice.</p>
       </div>
-      <div class="why-card math-c2">
-        <div class="why-icon"><i class="fas fa-brain"></i></div>
-        <h3>Logica & creativitatea</h3>
-        <p>Rezolvarea problemelor cere atât rigoare, cât și idei neașteptate. Învățăm să încercăm strategii diverse, să reformulăm o întrebare și să verificăm soluția — un tip de creativitate disciplinată.</p>
+      <div class="why-card fr-c2">
+        <div class="why-icon"><i class="fas fa-ear-listen"></i></div>
+        <h3>Comprehensiune & producție</h3>
+        <p>Învățăm să înțelegem vorbirea naturală și texte autentice, apoi să răspundem coerent — oral și în scris. Echilibrul între acuratețe gramaticală și fluență este obiectivul pe termen lung.</p>
       </div>
-      <div class="why-card math-c3">
-        <div class="why-icon"><i class="fas fa-book-open"></i></div>
-        <h3>Ce resurse avem?</h3>
-        <p>Manuale și culegeri aprobate, platforme digitale, propuneri pentru olimpiade și concursuri, materiale de recapitulare și lucrări de consolidare. Orele valorizează explicația clară, exemplele bine alese și feedback-ul individual acolo unde e nevoie.</p>
+      <div class="why-card fr-c3">
+        <div class="why-icon"><i class="fas fa-layer-group"></i></div>
+        <h3>Ce resurse folosim?</h3>
+        <p>Manuale și auxiliare aprobate, materiale audio-video, texte adaptate nivelului, platforme online și, acolo unde e posibil, parteneriate cu instituții francofone sau proiecte eTwinning.</p>
       </div>
-      <div class="why-card math-c4">
-        <div class="why-icon"><i class="fas fa-trophy"></i></div>
-        <h3>Unde participăm?</h3>
-        <p>Elevii pot lua parte la olimpiade școlare, județene și naționale, la concursuri interjudețene și la proiecte STEM. Încurajăm participarea celor motivați și pregătirea suplimentară în mod organizat.</p>
+      <div class="why-card fr-c4">
+        <div class="why-icon"><i class="fas fa-medal"></i></div>
+        <h3>Unde ne duce?</h3>
+        <p>De la Bacalaureat și admitere la studii în România sau în străinătate, până la concursuri școlare, diplome DELF/DALF și mobilități Erasmus. Fiecare parcurs începe cu pași constanți în clasă.</p>
       </div>
     </div>
   </div>
@@ -786,45 +796,38 @@ footer strong { color: rgba(255,255,255,0.7); }
 <section id="profesori">
   <div class="container">
     <p class="section-tag reveal"><i class="fas fa-chalkboard-teacher"></i> Echipa noastră</p>
-    <h2 class="section-title reveal">Profesori dedicați<br>disciplinei și elevilor</h2>
-    <p class="section-desc reveal">Catedra de Matematică susține progresul fiecărui elev: de la înțelegerea conceptelor de bază până la performanță la concursuri. Comunicăm așteptări clare și oferim suport pentru teme, recuperări și aprofundări.</p>
+    <h2 class="section-title reveal">Profesori pentru<br>limba și cultura franceză</h2>
+    <p class="section-desc reveal">Catedra de Limba franceză îmbină rigoarea lingvistică cu deschiderea culturală. Orele sunt gândite ca spații de încredere în care elevii exersează, greșesc, corectează și progresează.</p>
 
-    <span class="dept-label reveal"><i class="fas fa-square-root-variable" style="margin-right:6px"></i> Catedra de Matematică</span>
-    <!-- Poze: plasează lângă index.html fișierele rus_sonia.*, martaian_ioana.*, ladar_rodica.*, timbus_oana.*, gherman_ioana.* (png sau jpg) sau actualizează atributul src de mai jos. -->
+    <span class="dept-label reveal"><i class="fas fa-language" style="margin-right:6px"></i> Catedra de Limba franceză</span>
+    <!-- Poze: plasează lângă acest fișier: ilban_damacus_elena.png, pau_emanuel.png, balog_daniela.png, draga_alina.png -->
     <div class="teachers-row">
       <div class="teacher-card reveal">
-        <img src="rus_sonia.png" class="teacher-avatar" alt="Rus Sonia" onerror="this.onerror=null;this.src='https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png'">
+        <img src="ilban_damacus_elena.png" class="teacher-avatar" alt="Ilban-Dămăcuș Elena" onerror="this.onerror=null;this.src='https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png'">
         <div class="teacher-info">
-          <h4>Rus Sonia</h4>
-          <span>Profesor de Matematică</span>
+          <h4>Ilban-Dămăcuș Elena</h4>
+          <span>Profesor de Limba franceză</span>
         </div>
       </div>
       <div class="teacher-card reveal delay-1">
-        <img src="martaian_ioana.png" class="teacher-avatar" alt="Martaian Ioana" onerror="this.onerror=null;this.src='https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png'">
+        <img src="pau_emanuel.png" class="teacher-avatar" alt="Pau Emanuel" onerror="this.onerror=null;this.src='https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png'">
         <div class="teacher-info">
-          <h4>Martaian Ioana</h4>
-          <span>Profesor de Matematică</span>
+          <h4>Pau Emanuel</h4>
+          <span>Profesor de Limba franceză</span>
         </div>
       </div>
       <div class="teacher-card reveal delay-2">
-        <img src="ladar_rodica.png" class="teacher-avatar" alt="Lădar Rodica" onerror="this.onerror=null;this.src='https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png'">
+        <img src="balog_daniela.png" class="teacher-avatar" alt="Balog Daniela" onerror="this.onerror=null;this.src='https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png'">
         <div class="teacher-info">
-          <h4>Lădar Rodica</h4>
-          <span>Profesor de Matematică</span>
+          <h4>Balog Daniela</h4>
+          <span>Profesor de Limba franceză</span>
         </div>
       </div>
       <div class="teacher-card reveal delay-3">
-        <img src="timbus_oana.png" class="teacher-avatar" alt="Timbuș Oana" onerror="this.onerror=null;this.src='https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png'">
+        <img src="draga_alina.png" class="teacher-avatar" alt="Dragă Alina" onerror="this.onerror=null;this.src='https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png'">
         <div class="teacher-info">
-          <h4>Timbuș Oana</h4>
-          <span>Profesor de Matematică</span>
-        </div>
-      </div>
-      <div class="teacher-card reveal delay-4">
-        <img src="gherman_ioana.png" class="teacher-avatar" alt="Gherman Ioana" onerror="this.onerror=null;this.src='https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png'">
-        <div class="teacher-info">
-          <h4>Gherman Ioana</h4>
-          <span>Profesor de Matematică</span>
+          <h4>Dragă Alina</h4>
+          <span>Profesor de Limba franceză</span>
         </div>
       </div>
     </div>
@@ -835,37 +838,37 @@ footer strong { color: rgba(255,255,255,0.7); }
   <div class="container">
     <div class="activities-layout">
       <div class="activities-text">
-        <p class="section-tag math reveal"><i class="fas fa-rocket"></i> Ce facem</p>
-        <h2 class="section-title reveal">Dincolo de exercițiul mecanic</h2>
-        <p class="section-desc reveal">Putem rezolva multe probleme doar prin proceduri, dar înțelegerea durabilă vine din explicații, conexiuni între capitole și întrebări care provoacă gândirea. Activitățile noastre includ consolidare, pregătire pentru examene și spațiu pentru curiozitate.</p>
+        <p class="section-tag fr reveal"><i class="fas fa-rocket"></i> Ce facem</p>
+        <h2 class="section-title reveal">Dincolo de listele de vocabular</h2>
+        <p class="section-desc reveal">Limba se consolidează prin repetare inteligentă și prin situații semnificative: jocuri de rol, dezbateri, proiecte tematice și lecturi alese. Fiecare activitate urmărește competențe clare: a înțelege, a vorbi, a scrie, a interacționa.</p>
       </div>
       <div class="activities-feature">
         <div class="activity-item reveal">
           <span class="activity-num">01</span>
           <div class="activity-content">
-            <h4>Problem solving & metode</h4>
-            <p>Strategii (lucrul invers, descompunere, schimbare de variabilă), identificarea tiparului și verificarea soluției. Accent pe enunțuri variate și pe explicarea pașilor, nu doar pe rezultat.</p>
+            <h4>Oral & pronunție</h4>
+            <p>Exersăm intonația, legăturile și ritmul propoziției. Mini-dialoguri, prezentări scurte și feedback corectiv pentru încredere la examen și în viață.</p>
           </div>
         </div>
         <div class="activity-item reveal delay-1">
           <span class="activity-num">02</span>
           <div class="activity-content">
-            <h4>Geometrie & vizualizare</h4>
-            <p>Figuri, transformări, metrică în plan și în spațiu acolo unde programa o cere. Legături cu desenul tehnic și cu modele din realitate pentru a ancura abstractul în experiență.</p>
+            <h4>Lectură & analiză</h4>
+            <p>Fragmente literare, presă adaptată sau documente autentice. Înțelegem structura textului, vocabularul contextual și mesajul autorului.</p>
           </div>
         </div>
         <div class="activity-item reveal delay-2">
           <span class="activity-num">03</span>
           <div class="activity-content">
-            <h4>Pregătire Bac & admitere</h4>
-            <p>Recapitulări pe subiecte, subiecte model și exersarea gestionării timpului. Suport pentru cei care urmăresc profil real sau filiera vocațională, cu adaptare la specificul clasei.</p>
+            <h4>Gramatică în context</h4>
+            <p>Timpuri verbale, concordanța, pronumele — explicate prin exemple și exerciții progresive, nu mecanic, ci legate de sens.</p>
           </div>
         </div>
         <div class="activity-item reveal delay-3">
           <span class="activity-num">04</span>
           <div class="activity-content">
-            <h4>Olimpiade & concursuri</h4>
-            <p>Grupuri de pregătire pentru elevi motivați, probleme de tip olimpiadă și simulări. Obiectivul este atât rezultatul la concurs, cât și dezvoltarea autonomiei în rezolvare.</p>
+            <h4>Proiecte & evenimente</h4>
+            <p>Zile tematice, teatru în limba franceză, parteneriate cu alte școli sau concursuri de traducere și exprimare. Cultura devine experiență, nu doar informație.</p>
           </div>
         </div>
       </div>
@@ -875,34 +878,34 @@ footer strong { color: rgba(255,255,255,0.7); }
 
 <section class="media-section" id="galerie">
   <div class="container">
-    <p class="section-tag math reveal"><i class="fas fa-images"></i> Galerie</p>
-    <h2 class="section-title reveal">Momente din activități<br>și viața catedrei</h2>
-    <p class="section-desc reveal">Fotografii și materiale din ore, proiecte și evenimente școlare. Poți înlocui fișierele de mai jos cu imagini proprii din activitățile de matematică (păstrând aceleași denumiri de fișier sau actualizând căile <code style="font-size:0.9em;background:var(--math-light);padding:2px 6px;border-radius:4px">src</code> în HTML).</p>
+    <p class="section-tag fr reveal"><i class="fas fa-images"></i> Galerie</p>
+    <h2 class="section-title reveal">Momente din activități<br>și proiecte</h2>
+    <p class="section-desc reveal">Poți folosi aceleași imagini ca pe site-ul de matematică (dacă sunt în același folder) sau înlocui <code style="font-size:0.9em;background:var(--fr-light);padding:2px 6px;border-radius:4px">src</code> cu fotografii din orele și evenimentele de franceză.</p>
 
     <div class="media-grid reveal">
-      <div class="media-item"><img src="0303ccd3-4641-496c-85bb-7cec2282e774.jpg" alt="Activitate matematică"></div>
-      <div class="media-item"><img src="056167cd-463a-4860-bf04-32906b5c77fc.jpg" alt="Activitate matematică"></div>
-      <div class="media-item"><img src="0992fe92-401e-4ee7-9752-2c44ebee0f3c.jpg" alt="Activitate matematică"></div>
-      <div class="media-item"><img src="0d35696a-4572-41b1-ac81-8470f46e6f77.jpg" alt="Activitate matematică"></div>
-      <div class="media-item"><img src="130ea3f1-0e57-4898-a96d-7f37015bea05.jpg" alt="Activitate matematică"></div>
-      <div class="media-item"><img src="1ef42a4e-567e-46a6-8dc3-94dfb091c283.jpg" alt="Activitate matematică"></div>
-      <div class="media-item"><img src="2165e9c1-f89e-4408-9e1a-344a8a7e34d2.jpg" alt="Activitate matematică"></div>
-      <div class="media-item"><img src="46381ae4-8f76-4ec1-8a02-cf891b98508e.jpg" alt="Activitate matematică"></div>
-      <div class="media-item"><img src="63928c30-4f95-4488-9aab-2beda2730e2d.jpg" alt="Activitate matematică"></div>
-      <div class="media-item"><img src="660adbd6-bb7b-4637-ac00-7fbf814333f2.jpg" alt="Activitate matematică"></div>
-      <div class="media-item"><img src="80b1315b-4986-4b62-8cd6-a1ef7b9ecbe6.jpg" alt="Activitate matematică"></div>
-      <div class="media-item"><img src="9951607d-0d3b-4c3c-970a-2355838673bd.jpg" alt="Activitate matematică"></div>
-      <div class="media-item"><img src="9ea8fc6c-966d-49fa-a097-e92c8d9c4a79.jpg" alt="Activitate matematică"></div>
-      <div class="media-item"><img src="a71ab949-5d35-4a3c-b768-1708319cd18e.jpg" alt="Activitate matematică"></div>
-      <div class="media-item"><img src="ab0bdf0b-b43f-4451-816f-2683c0525955.jpg" alt="Activitate matematică"></div>
-      <div class="media-item"><img src="b405751b-0027-445c-a9c3-63a4e895f8aa.jpg" alt="Activitate matematică"></div>
-      <div class="media-item"><img src="ba4569b4-ad23-4628-8a91-82b4ffe3fe48.jpg" alt="Activitate matematică"></div>
-      <div class="media-item"><img src="c9579dd4-47ca-489b-a66a-74fe9cc76fd6.jpg" alt="Activitate matematică"></div>
-      <div class="media-item"><img src="cfd27237-bb24-47dc-888e-89343c2e9650.jpg" alt="Activitate matematică"></div>
-      <div class="media-item"><img src="d3b41a51-52fa-4e86-a32a-8953ffe27500.jpg" alt="Activitate matematică"></div>
-      <div class="media-item"><img src="d5509634-2850-49ea-b35d-57adf025ad26.jpg" alt="Activitate matematică"></div>
-      <div class="media-item"><img src="dbdfcf62-f268-4e5f-8823-b286db20bfe7.jpg" alt="Activitate matematică"></div>
-      <div class="media-item"><img src="ef4f22cc-bc7a-4326-9331-949887d96cae.jpg" alt="Activitate matematică"></div>
+      <div class="media-item"><img src="0303ccd3-4641-496c-85bb-7cec2282e774.jpg" alt="Activitate limba franceză"></div>
+      <div class="media-item"><img src="056167cd-463a-4860-bf04-32906b5c77fc.jpg" alt="Activitate limba franceză"></div>
+      <div class="media-item"><img src="0992fe92-401e-4ee7-9752-2c44ebee0f3c.jpg" alt="Activitate limba franceză"></div>
+      <div class="media-item"><img src="0d35696a-4572-41b1-ac81-8470f46e6f77.jpg" alt="Activitate limba franceză"></div>
+      <div class="media-item"><img src="130ea3f1-0e57-4898-a96d-7f37015bea05.jpg" alt="Activitate limba franceză"></div>
+      <div class="media-item"><img src="1ef42a4e-567e-46a6-8dc3-94dfb091c283.jpg" alt="Activitate limba franceză"></div>
+      <div class="media-item"><img src="2165e9c1-f89e-4408-9e1a-344a8a7e34d2.jpg" alt="Activitate limba franceză"></div>
+      <div class="media-item"><img src="46381ae4-8f76-4ec1-8a02-cf891b98508e.jpg" alt="Activitate limba franceză"></div>
+      <div class="media-item"><img src="63928c30-4f95-4488-9aab-2beda2730e2d.jpg" alt="Activitate limba franceză"></div>
+      <div class="media-item"><img src="660adbd6-bb7b-4637-ac00-7fbf814333f2.jpg" alt="Activitate limba franceză"></div>
+      <div class="media-item"><img src="80b1315b-4986-4b62-8cd6-a1ef7b9ecbe6.jpg" alt="Activitate limba franceză"></div>
+      <div class="media-item"><img src="9951607d-0d3b-4c3c-970a-2355838673bd.jpg" alt="Activitate limba franceză"></div>
+      <div class="media-item"><img src="9ea8fc6c-966d-49fa-a097-e92c8d9c4a79.jpg" alt="Activitate limba franceză"></div>
+      <div class="media-item"><img src="a71ab949-5d35-4a3c-b768-1708319cd18e.jpg" alt="Activitate limba franceză"></div>
+      <div class="media-item"><img src="ab0bdf0b-b43f-4451-816f-2683c0525955.jpg" alt="Activitate limba franceză"></div>
+      <div class="media-item"><img src="b405751b-0027-445c-a9c3-63a4e895f8aa.jpg" alt="Activitate limba franceză"></div>
+      <div class="media-item"><img src="ba4569b4-ad23-4628-8a91-82b4ffe3fe48.jpg" alt="Activitate limba franceză"></div>
+      <div class="media-item"><img src="c9579dd4-47ca-489b-a66a-74fe9cc76fd6.jpg" alt="Activitate limba franceză"></div>
+      <div class="media-item"><img src="cfd27237-bb24-47dc-888e-89343c2e9650.jpg" alt="Activitate limba franceză"></div>
+      <div class="media-item"><img src="d3b41a51-52fa-4e86-a32a-8953ffe27500.jpg" alt="Activitate limba franceză"></div>
+      <div class="media-item"><img src="d5509634-2850-49ea-b35d-57adf025ad26.jpg" alt="Activitate limba franceză"></div>
+      <div class="media-item"><img src="dbdfcf62-f268-4e5f-8823-b286db20bfe7.jpg" alt="Activitate limba franceză"></div>
+      <div class="media-item"><img src="ef4f22cc-bc7a-4326-9331-949887d96cae.jpg" alt="Activitate limba franceză"></div>
       <div class="media-item">
         <video controls>
           <source src="Ziua Stiintei 1.mp4" type="video/mp4">
@@ -915,28 +918,28 @@ footer strong { color: rgba(255,255,255,0.7); }
 <section class="testimonials-section" id="elevi">
   <div class="container">
     <p class="section-tag reveal"><i class="fas fa-quote-left"></i> Vocea elevilor</p>
-    <h2 class="section-title reveal" style="margin-bottom: 48px;">Ce spun ei despre<br>orele de matematică</h2>
+    <h2 class="section-title reveal" style="margin-bottom: 48px;">Ce spun ei despre<br>orele de franceză</h2>
 
     <div class="testimonials-grid">
       <div class="testimonial-card reveal">
-        <blockquote>„Când am înțeles de ce funcționează o formulă, nu doar cum s-o aplic, totul s-a așezat. Explicațiile sunt clare și avem timp și pentru întrebări.”</blockquote>
+        <blockquote>„La început îmi era teamă să vorbesc, dar acum particip la dialoguri fără să mai caut mereu traducerea în română. Atmosfera e deschisă și constructive.”</blockquote>
         <div class="testimonial-author">
-          <div class="author-dot" style="background: var(--math)">M</div>
-          <span>Maria · Clasa 10B</span>
+          <div class="author-dot" style="background: var(--fr)">S</div>
+          <span>Sofia · Clasa 10B</span>
         </div>
       </div>
       <div class="testimonial-card reveal delay-1">
-        <blockquote>„Matematica mă ajută la profilul real și mă pregătește pentru facultate. Îmi place că putem exersa mult tipuri de probleme și primim feedback constructiv.”</blockquote>
+        <blockquote>„Îmi place că vedem și filme, și fragmente din presă, nu doar reguli. Franceza începe să sune natural, nu doar ca la manual.”</blockquote>
         <div class="testimonial-author">
-          <div class="author-dot" style="background: var(--math-mid)">A</div>
-          <span>Andrei · Clasa 12A</span>
+          <div class="author-dot" style="background: var(--fr-mid)">T</div>
+          <span>Tudor · Clasa 12A</span>
         </div>
       </div>
       <div class="testimonial-card reveal delay-2">
-        <blockquote>„Concursurile și problemele extra m-au învățat să nu renunț după primul eșec. Atmosfera este exigentă, dar corectă și încurajatoare.”</blockquote>
+        <blockquote>„Proiectul de grup în franceză a fost una dintre cele mai frumoase experiențe din liceu. Am învățat limba colaborând, nu doar memorând.”</blockquote>
         <div class="testimonial-author">
-          <div class="author-dot" style="background: var(--slate)">I</div>
-          <span>Ioana · Clasa 11C</span>
+          <div class="author-dot" style="background: var(--accent)">E</div>
+          <span>Elena · Clasa 11C</span>
         </div>
       </div>
     </div>
@@ -945,7 +948,7 @@ footer strong { color: rgba(255,255,255,0.7); }
 
 <footer>
   <div class="container">
-    <div class="footer-logo">Matematică</div>
+    <div class="footer-logo">Limba franceză</div>
     <p><strong>Liceul Teoretic „Ana Ipătescu"</strong> · Gherla, Cluj</p>
     <p style="margin-top:8px">© 2026 · Toate drepturile rezervate</p>
   </div>
